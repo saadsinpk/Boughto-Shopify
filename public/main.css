@@ -1,0 +1,998 @@
+.boughto_wheel_search_by_vehicle h5 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .CardMain_Box_B_ {
+    max-height: 200px;
+    /* height: 200px; */
+    /* height: 140px; */
+    /* overflow: hidden; */
+    /* overflow-y: auto; */
+  }
+
+  .boughto-search,
+  .boughto_tyre-search {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .boughto_tyre_size_confirm h5 {
+    margin: 10px 0;
+  }
+
+  .boughto-search select,
+  .boughto_tyre-search select {
+    border: 1px solid var(--boughto_primary_hex);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    height: 43px;
+    outline: none;
+    padding-left: 5px;
+    width: 100%;
+  }
+
+  .boughto-search-button button {
+    background: var(--boughto_primary_hex);
+    border: none;
+    color: var(--boughto_text_hex);
+    display: block;
+    font-weight: 700;
+    height: 43px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .boughto_wheel_brandsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+  }
+
+  .boughto_wheel_brandsGridBox_ {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    text-align: center;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+  }
+
+  .boughto_wheel_brandsGridBox_ img {
+    width: 100%;
+    object-fit: scale-down;
+  }
+
+  .boughto_wheel_brandsGridBox h3 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 10px 0 5px;
+    color: #737373;
+  }
+
+  a.boughto_wheel_brandsGridBox {
+    text-decoration: none;
+  }
+
+  a.boughto_wheel_brandsGridBox img {
+    border: transparent;
+  }
+
+  a.boughto_wheel_brandsGridBox.boughto_wheel_brandsGridBox2 img {
+    height: auto;
+    max-height: 80px;
+  }
+
+  .boughto_wheel_brandsGridBox2 h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .boughto_wheel_brandsGridBox2 h3 {
+    font-size: 2rem;
+    color: #171717;
+    font-weight: 900;
+  }
+
+  .boughto_wheel_brandsDetailsPAge {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .wheelGrid {
+    margin: 0px 0 10px 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .wheelBox {
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    margin: 0;
+  }
+
+  .wheelBox.active {
+    border: 1px solid var(--boughto_primary_hex);
+  }
+
+  .wheelBox img {
+    width: 70px;
+    margin: 0;
+    border: 1px solid transparent;
+  }
+
+  .boughto_wheel_brandsDetailsPAge p {
+    margin: 0;
+  }
+
+  .modalSearch {
+    width: 100%;
+    border: 1px solid transparent;
+    background: var(--boughto_primary_hex);
+    padding: 13px 20px;
+    border-radius: 0.8rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .prevNext {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .prevNext a {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgb(147 143 143 / 47%);
+    color: rgb(147, 143, 143);
+    padding: 7px 20px;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .tagss {
+    display: flex;
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0 !important;
+    margin: 10px 0;
+  }
+
+  .tagss li {
+    background: #f5f5f5;
+    border-radius: 1rem;
+    padding: 5px 10px;
+    line-height: 1;
+    font-size: 11px;
+  }
+
+  .boughto_wheel_brandsDetailsPAge_right img {
+    width: 100%;
+    border: 1px solid transparent;
+  }
+
+  .boughto_wheel_brandsDetailsPAge_left h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .boughto_wheel_brandsDetailsPAge_left h5 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .boughto_wheel_brandsDetailsPAge p {
+    margin-top: 10px;
+  }
+  .modalBox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    max-width: 86rem;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 99;
+    background: #fff;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0.9);
+    padding: 10px 30px;
+    /* display: none; */
+    transition: 0.3s;
+    visibility: hidden;
+  }
+  .modalBox.active {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+  .modalBoxBack {
+    background: #969696a1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 9;
+    display: none;
+  }
+
+  .modalBoxBack.active {
+    display: block;
+  }
+
+
+
+  .modalBox_ {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+
+  .modalBoxClose {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  .modalBox__Left img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+  .modalSelect .boughto-search {
+    grid-template-columns: 1fr;
+    margin-top: 13px;
+  }
+
+  .modalSelect .boughto-search select {
+    height: 38px;
+  }
+
+  .boughto_alloy_wheel_results {
+    margin-top: 40px;
+  }
+
+  .boughto_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .boughto_top-right .boughto_top-right-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .boughto_top-right .boughto_top-right-button svg {
+    width: 20px;
+  }
+
+  .boughto_top-right-drop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .boughto_top-right-drop {
+    box-shadow: 0 0 10px #ddd;
+    position: absolute;
+    right: 5px;
+    width: max-content;
+    border-radius: 0.5rem;
+    display: none;
+    border-radius: 1rem;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .boughto_top-right-drop li {
+    cursor: pointer;
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .boughto_top-right {
+    position: relative;
+  }
+
+  .boughto_top-right-drop.active {
+    display: block;
+  }
+
+  .boughto_top {
+    margin: 20px 0;
+  }
+
+  .accorditon_boughto_top {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    margin: 30px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .accorditon_boughto_top h3 {
+    margin: 0;
+  }
+
+  .boughto_bottom {
+    display: grid;
+    grid-template-columns: 22% 76%;
+    gap: 2%;
+  }
+
+  .accorditon_boughto_top svg {
+    width: 20px;
+  }
+
+  .accorditon_boughto_bottom {
+    display: none;
+  }
+
+  .accorditon_boughto_bottom ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .accorditon_boughto.active .accorditon_boughto_bottom {
+    display: block;
+  }
+
+  .CardMain {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 32% 32% 32%;
+    gap: 2%;
+    gap: 1rem;
+  }
+
+  .CardMain_Box {
+    /* width: 31%; */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 1rem;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .CardMain_Box ul {
+    list-style: none;
+  }
+
+  .CardMain_Box img {
+    max-width: auto;
+    height: 201px;
+    border: transparent;
+    margin: 0 auto;
+    display: block;
+  }
+  .CardMain_Box_B {
+    position: relative;
+    overflow: hidden;
+  }
+  .CardMain_Box_B ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 3px;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* min-height: 49px; */
+    /* flex-wrap: wrap; */
+  }
+  .accorditon_boughto_bottom label {
+    display: flex;
+  }
+  .accorditon_boughto_bottom .inpud span {
+    width: 15px;
+    display: block;
+    height: 15px;
+    border: 1px solid var(--boughto_primary_hex);
+    border-radius: 0.4rem;
+    position: absolute;
+    left: 0;
+    top: 47%;
+    transform: translateY(-50%);
+  }
+
+  .inpud {
+    position: relative;
+  }
+
+  .inpud input {
+    appearance: none;
+  }
+
+  .accd {
+    height: 20px;
+  }
+
+  .accorditon_boughto_bottom label > span {
+    margin-left: 13px;
+  }
+
+  .inpud input:checked + span {
+    background: #f00;
+  }
+
+  .diameterlist .inpud   input:checked + span::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 52%;
+    background: #ffffff;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%);
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%; }
+  .inpud   input:checked + span::before {
+    /* content: "";
+    position: absolute;
+    left: -1px;
+    top: 52%;
+    background: #ffffff;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%);
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%; */
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -23%;
+    /* background: #ffffff; */
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%);
+    right: 3px;
+    margin: 0 auto;
+    border-radius: 50%;
+    content: "\2713";
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .boughto_top-right-drop .active{
+    font-weight: bold;
+  }
+  .CardMain_Box_B ul li {
+    position: relative;
+    color: #737373;
+    line-height: 1;
+  }
+
+  .CardMain_Box_B ul span {
+    min-width: 5px;
+    min-height: 5px;
+    max-width: 5px;
+    max-height: 5px;
+    border-radius: 50%;
+    background: #737373;
+    top: 7px;
+    position: relative;
+  }
+
+  .CardMain_Box_BB {
+    background: #e5e5e5;
+    width: 100%;
+    margin-top: 40px ;
+    padding: 6px;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .paginationSe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .paginationSe button {
+    border: 1px solid #ddd;
+    background: transparent;
+    padding: 10px;
+    border-radius: 0.4rem;
+  }
+
+  ul.paginationSeli {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0 auto;
+  }
+
+  ul.paginationSeli li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+  }
+
+  ul.paginationSeli li.active {
+    border-color: red;
+  }
+
+  .wheelPage {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wheelPageleft img {
+    width: 100%;
+    border: transparent;
+  }
+
+  .wheelPageleft p {
+    text-align: center;
+  }
+
+  .wheelPagerightTable {
+    border-collapse: collapse;
+    border: 1px solid transparent;
+  }
+
+  .wheelPagerightTable th,
+  .wheelPagerightTable td {
+    padding: 10px;
+  }
+
+  .wheelPagerightTable th {
+    background: #f5f5f5;
+    color: #737373;
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 1.1;
+    text-align: left;
+    padding: 13px 10px;
+  }
+  .dfd {
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    box-shadow: 0 4px 3px #ddd;
+  }
+
+  .dfd th:first-child {
+    border-radius: 1rem 0 0 0;
+  }
+
+  .dfd th:last-child {
+    border-radius: 0 1rem 0 0;
+  }
+  .paginationSeNext,
+  .paginationSePre,
+  .paginationSeli li {
+    cursor: pointer;
+  }
+  /* ------------------- */
+
+  .typerCard {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .typerCard1 img {
+    width: 100%;
+  }
+
+  .typerCard2 img {
+    width: 100%;
+  }
+
+  .typerCardDetailsB {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .typerCardDetailsB img {
+    width: 26px;
+    display: block;
+  }
+
+  .typerCardDetailsC {
+    background: #e5e5e5;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .typerCardDetailsC p,
+  .typerCardDetailsC h3 {
+    margin: 0;
+  }
+
+  .typerCardDetailsD {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .typerCardDetailsD select {
+    width: 100%;
+    padding: 4.8px;
+  }
+
+  .typerCardDetailsD button {
+    background: #b5151e;
+    border: transparent;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  img {
+    border: transparent !important;
+  }
+
+  button.AddCatd {
+    margin: 20px 0;
+    border: 1px solid transparent;
+    background: var(--boughto_primary_hex);
+    padding: 13px 60px;
+    border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  table.tableBox th {
+    border-bottom: 1px solid #ddd;
+  }
+
+  table.tableBox {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .tableBox_ {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0 0;
+  }
+
+  .tableBox_Img img {
+    width: 100px;
+  }
+
+  table.tableBox thead td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .tableBox_body p {
+    margin: 0;
+  }
+
+  .removeId {
+    text-align: center;
+    cursor: pointer;
+  }
+  .loader_ {
+    position: fixed;
+    left: 0;
+    z-index: 9;
+    background: #fff;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: none;
+    place-items: center;
+  }
+
+  .loader2 {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    display: block !important;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .boughto_top-rightmobile,
+  .filterH {
+    display: none;
+  }
+
+  .boughto_top-rightmobile button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: transparent;
+    font-size: 14px;
+    color: #a3a3a3;
+  }
+
+  .boughto_top-rightmobile svg {
+    width: 20px;
+  }
+  .CardMain_Box_B p {
+    min-height: 81px;
+    font-size: 15px;
+  }
+  .CardMain_Box_BB span {
+    font-weight: 400;
+  }
+  .wheelPageright h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin: 0;
+  }
+  .wheelPageright h3 {
+    margin-top: 0;
+    font-size: 3.1rem;
+  }
+  table.tableBox th {
+    text-align: left;
+  }
+  .tagss {
+    flex-wrap: wrap;
+  }
+
+  .boughto_wheel_brandsDetailsPAge_left h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .boughto_wheel_brandsDetailsPAge_left h5 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .boughto_wheel_brandsDetailsPAge p {
+    margin-top: 10px;
+  }
+
+  .modalBox__Right_ h3 {
+    font-weight: 800;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .modalBox__Right_ p {
+    margin-top: 0;
+  }
+
+  table.wheelPagerightTable {
+    width: 100%;
+  }
+  .boughto_wheel_brandsGrid.active {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .boughto_wheel_brandsGrid.active img {
+    max-height: 100% !important;
+  }
+  .boughto_wheel_brandsGrid.active .boughto_wheel_brandsGridBox2 h4,
+  .boughto_wheel_brandsGrid.active .boughto_wheel_brandsGridBox2 h3 {
+    text-align: left;
+  }
+  @media only screen and (max-width: 1129px){
+  .CardMain {
+      grid-template-columns: 50% 50%;
+  }
+  }
+  @media only screen and (max-width: 979px) {
+    .boughto-search {
+      grid-template-columns: auto;
+    }
+    .boughto_bottom,
+    .wheelPage,
+    .modalBox_ {
+      grid-template-columns: 1fr;
+    }
+    .CardMain {
+      grid-template-columns: 50% 50%;
+    }
+    .CardMain_Box img {
+      height: 128px;
+    }
+    .CardMain_Box_B p {
+      font-size: 13px;
+    }
+    .CardMain_Box_B ul li {
+      font-size: 12px;
+    }
+    .CardMain_Box_B_ {
+      /* max-height: 160px; */
+      /* height: 160px; */
+    }
+    .paginationSeli {
+      display: none;
+    }
+    table.wheelPagerightTable {
+      width: 100%;
+    }
+    table {
+      font-size: 11px;
+    }
+    .boughto_wheel_brandsGrid,
+    .boughto_wheel_brandsGrid.active {
+      grid-template-columns: 1fr 1fr;
+    }
+    .boughto_wheel_brandsDetailsPAge {
+      grid-template-columns: 1fr;
+    }
+
+    .boughto_wheel_brandsDetailsPAge_right {
+      order: 1 !important;
+    }
+
+    .boughto_wheel_brandsDetailsPAge_left {
+      order: 2;
+    }
+
+    .boughto_top-rightmobile {
+      display: block;
+    }
+    /* .boughto_top-right .boughto_top-right-button,
+    .boughto_bottom_left{
+      display:none;
+    } */
+    .boughto_top-right-button {
+      display: none !important;
+    }
+    .boughto_bottom_left {
+      position: fixed;
+      z-index: 9;
+      width: 350px;
+      background: #fff;
+      right: -100%;
+      top: 0;
+      height: 100%;
+      padding: 16px;
+      z-index: 9;
+      transition: .3s;
+  }
+    }
+    .boughto_bottom_left.active {
+       right: 0;
+    }
+
+    .boughto_bottom_left.active .filterH {
+      display: flex;
+      font-size: 19px;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+    }
+
+    .filterH h5 {
+      font-size: 22px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .backg.active {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: block;
+      color: transparent;
+      visibility: visible;
+    }
+
+    .CardMain_Box {
+      width: 100%;
+    }
+
+
+  @media only screen and (max-width: 600px) {
+    .boughto_wheel_brandsGrid,
+    .boughto_wheel_brandsGrid.active {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+     .boughto_wheel_brandsGrid h3,
+    .boughto_wheel_brandsGrid.active h3{
+    font-size: 16px;
+    }
+    .modalBox__Left img {
+      max-height: 150px;
+    }
+    a.boughto_wheel_brandsGridBox img,
+    a.boughto_wheel_brandsGridBox.boughto_wheel_brandsGridBox2 img {
+      height: 105px !important;
+    }
+  }
+  @media (max-width:500px) {
+    .CardMain {
+      grid-template-columns: 300px;
+      justify-content: center;
+  }
+  }
+
+  .CardMain_Box_B_::-webkit-scrollbar-thumb {
+    background: var(--boughto_primary_hex);
+  }
+
+  .CardMain_Box_B_::-webkit-scrollbar {
+    width: 0.4rem;
+    background-color: #ddd;
+  }
+  .boughto_alloy_wheel_results,.boughto_wheel_search_by_vehicle ,h1.main-page-title.page-title.h0.scroll-trigger.animate--fade-in {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .bg-green{
+    text-align:center ;
+    background:rgb(240 253 244);
+    border: 1px solid rgb(187 247 208);
+    border-radius: 10px;
+  }
+  .backg  {
+      position: fixed;
+      z-index: 8;
+      background: #2a2a2a;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: block;
+      opacity: .6;
+      visibility: hidden;
+      color: transparent;
+  }
+
+  .boughto_top-rightmobile button{
+    cursor: pointer;
+  }
+  .filterH .cl{
+    cursor: pointer;
+  }
